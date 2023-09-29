@@ -25,8 +25,8 @@ public class EnemyBehaviour : MonoBehaviour
 
         velocity = norm_direction * speed;
         this.transform.position += velocity * Time.deltaTime;
-        float angle = Mathf.Atan2(velocity.y, velocity.x);
-        this.transform.localEulerAngles = new Vector3(0, 0, angle * Mathf.Rad2Deg);
+        //float angle = Mathf.Atan2(velocity.y, velocity.x);
+       // this.transform.localEulerAngles = new Vector3(0, 0, angle * Mathf.Rad2Deg);
 
         if (Distance < velocity.magnitude * Time.deltaTime)
         {
