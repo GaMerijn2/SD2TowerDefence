@@ -24,7 +24,7 @@ public class CamMovement : MonoBehaviour
 
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
-        Vector3 direction = new Vector3(horizontal, UpDown + 1, vertical).normalized;
+        Vector3 direction = new Vector3(horizontal, UpDown * 2, vertical).normalized;
 
         direction = direction * speed;
 
