@@ -11,7 +11,7 @@ public class GridSystem : MonoBehaviour
 
     private void Start()
     {
-        
+        gridSize = 5f;
     }
 
 
@@ -31,13 +31,13 @@ public class GridSystem : MonoBehaviour
     }
     private void OnDrawGizmos()
     {
-        // Gizmos.color = Color.green;
+        //Gizmos.color = Color.green;
         for (float x = 0; x < 1; x += size)
         {
             for (float z = 0; z < 1; z += size)
             {
                 //Vector3 point = GetNearestPointOnGridSystem(new Vector3(x, 5f, z));
-                // Gizmos.DrawSphere(point, 5f);
+                //Gizmos.DrawSphere(point, 2.5f);
             }
         }
     }
