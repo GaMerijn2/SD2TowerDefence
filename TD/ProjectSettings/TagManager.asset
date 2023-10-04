@@ -5,18 +5,19 @@ TagManager:
   serializedVersion: 2
   tags:
   - CantPlace
+  - Platform
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - GridCell
   - Towers
   - Enemy
-  - 
-  - 
+  - Indicator
+  - Borders
   - 
   - 
   - 
