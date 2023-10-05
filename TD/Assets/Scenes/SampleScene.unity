@@ -5003,6 +5003,8 @@ GameObject:
   m_Component:
   - component: {fileID: 513606322}
   - component: {fileID: 513606323}
+  - component: {fileID: 513606325}
+  - component: {fileID: 513606324}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -5064,6 +5066,40 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 715940609}
+--- !u!114 &513606324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513606321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 449ef5ebbe24720439ec31d15f7b6f3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FocusTracksTarget: 0
+  m_FocusTracking: 0
+  m_FocusTarget: {fileID: 0}
+  m_FocusOffset: 0
+  m_Profile: {fileID: 11400000, guid: a6560a915ef98420e9faacc1c7438823, type: 2}
+--- !u!114 &513606325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513606321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 729aad4491e915a41bda2b8325cf757a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FocusTracksTarget: 0
+  m_FocusTracking: 0
+  m_FocusTarget: {fileID: 0}
+  m_FocusOffset: 0
+  m_Profile: {fileID: 11400000, guid: 0522df9582d071c45b237bb51cde4157, type: 2}
 --- !u!1 &515715113
 GameObject:
   m_ObjectHideFlags: 0
@@ -10894,7 +10930,7 @@ PrefabInstance:
     - target: {fileID: 3725044697540178320, guid: c5e9f96c453e3f34a9424255266ade2f,
         type: 3}
       propertyPath: speed
-      value: 10
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 3725044697540178326, guid: c5e9f96c453e3f34a9424255266ade2f,
         type: 3}
