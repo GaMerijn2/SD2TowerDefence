@@ -1,35 +1,94 @@
+using Enums;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class RangeCheck : MonoBehaviour
 {
-    public LayerMask whatIsObject;
-    public int sightRange;
-    public bool objectInSightRange;
-    public GameObject enemy;
+
+    [SerializeField]
+    private List<Enemy> targetsInRange = new();
+
+    [SerializeField]
+    private Enemy currentTarget;
+
+    [SerializeField]
+    private TargetingStyle currentTargetingStyle = TargetingStyle.First;
+    private TargetingStyle previousTargetingStyle;
 
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        CheckIfInRange();
-        if (objectInSightRange)
+        previousTargetingStyle = currentTargetingStyle;
+    }
+
+    private void Update()
+    {
+        if(targetsInRange.Count > 0)
         {
-            LookAtObject();
+            Debug.DrawLine(transform.position, currentTarget.transform.position, color: Color.red);
+            transform.LookAt(currentTarget.transform.position);
+        }
+
+        if(previousTargetingStyle != currentTargetingStyle)
+        {
+            HandleTargetStyleSwitch();
         }
     }
 
-    private void CheckIfInRange()
-    {
-        objectInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsObject);
-        Debug.Log(objectInSightRange);
 
+
+    private void HandleTargetStyleSwitch()
+    {
+        previousTargetingStyle = currentTargetingStyle;
+        GetCurrentTarget();
+
+        Debug.Log("Attack Style Switched To " + currentTargetingStyle);
     }
 
-    private void LookAtObject()
+    private void HandleTargetDeath()
     {
-        Debug.Log("Object In Range");
-        this.transform.LookAt(enemy.transform.position);
+        currentTarget.OnDeath -= HandleTargetDeath;
+        GetCurrentTarget();
+    }
+
+    private void GetCurrentTarget()
+    {
+        if(targetsInRange.Count <=0)
+        {
+            Debug.Log("No Enemys In Range");
+            currentTarget = null;
+            return;
+        }
+
+        if(currentTarget != null)
+        {
+            currentTarget.OnDeath -= HandleTargetDeath;
+        }
+
+        currentTarget = currentTargetingStyle switch
+        {
+            TargetingStyle.First => targetsInRange.First(),
+            TargetingStyle.Last => targetsInRange.Last(),
+            TargetingStyle.Strong => targetsInRange.OrderBy(e => e.BaseHealth).First(),
+            TargetingStyle.Weak => targetsInRange.OrderBy(e => e.BaseHealth).Last(),
+            _ => targetsInRange.First()
+
+        };
+
+        currentTarget.OnDeath += HandleTargetDeath;
+    }
+    public void AddTargetToInRangeList(Enemy target)
+    {
+        targetsInRange.Add(target);
+        GetCurrentTarget();
+    }
+
+    public void RemoveTargetFromInRangeList(Enemy target)
+    {
+        targetsInRange.Remove(target);
+        GetCurrentTarget();
+
     }
 }
