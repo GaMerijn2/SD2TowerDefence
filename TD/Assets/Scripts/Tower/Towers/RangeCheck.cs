@@ -17,6 +17,7 @@ public class RangeCheck : MonoBehaviour
     private TargetingStyle currentTargetingStyle = TargetingStyle.First;
     private TargetingStyle previousTargetingStyle;
 
+    [SerializeField] ShootBullet shootBullet = new ShootBullet();
 
     private void Start()
     {
@@ -29,6 +30,7 @@ public class RangeCheck : MonoBehaviour
         {
             Debug.DrawLine(transform.position, currentTarget.transform.position, color: Color.red);
             transform.LookAt(currentTarget.transform.position);
+            shootBullet.ShootBulletForward(20, 0.5);
         }
 
         if(previousTargetingStyle != currentTargetingStyle)
