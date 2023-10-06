@@ -6,7 +6,6 @@ public class DestroyObject : MonoBehaviour
 {
     bool destroyBool;
    
-    // Start is called before the first frame update
     void Start()
     {
         destroyBool = false;
@@ -26,7 +25,6 @@ public class DestroyObject : MonoBehaviour
     }
     private void GetRidOfObject()
     {
-        //Debug.Log("Wait");
 
         destroyBool = false;
 
@@ -36,7 +34,6 @@ public class DestroyObject : MonoBehaviour
 
     private void DestroyObjects()
     {
-       // Debug.Log("Destroy");
         Destroy(this.gameObject);
 
         destroyBool = true;

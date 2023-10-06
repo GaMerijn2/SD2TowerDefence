@@ -24,7 +24,6 @@ public class ShootBullet : MonoBehaviour
     {
         if (!canAttack)
         {
-           // Debug.Log("Bullet shot");
 
             bulletSpeed = speed;
             attackCooldown = cooldown;
@@ -37,7 +36,6 @@ public class ShootBullet : MonoBehaviour
     }
     private void resetAttack()
     {
-       // Debug.Log("Cooldown Reset");
         canAttack = false;
     }
 

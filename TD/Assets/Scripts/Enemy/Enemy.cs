@@ -18,12 +18,17 @@ public class Enemy : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.SetDestination(GameObject.FindWithTag("EndPoint").transform.position);
     }
+
+    /*
     private IEnumerator DeathRoutine()
     {
         OnDeath.Invoke();
         Debug.Log("Death?");
         yield return new WaitForSeconds(0f);
-    }
+    }*/
+
+
+
 
 
 }

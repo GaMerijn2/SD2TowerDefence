@@ -26,14 +26,15 @@ public class RangeCheck : MonoBehaviour
     }
 
     private void Update()
-    {
-        if(targetsInRange.Count > 0)
+    {       
+        if(targetsInRange.Count > 0 )
         {
-
+            if(currentTarget != null)
+            {
                 Debug.DrawLine(transform.position, currentTarget.transform.position, color: Color.red);
                 transform.LookAt(currentTarget.transform.position);
                 shootBullet.ShootBulletForward(100, 0.5f);
-            
+            }
         }
 
         if(previousTargetingStyle != currentTargetingStyle)
@@ -42,35 +43,30 @@ public class RangeCheck : MonoBehaviour
         }
     }
 
-
-
     private void HandleTargetStyleSwitch()
     {
         previousTargetingStyle = currentTargetingStyle;
         GetCurrentTarget();
-
         Debug.Log("Attack Style Switched To " + currentTargetingStyle);
     }
 
     public void HandleTargetDeath()
     {
-        currentTarget.OnDeath -= HandleTargetDeath;
+        EnemyBehaviour.OnDeath -= HandleTargetDeath;
         GetCurrentTarget();
-        
     }
 
-    private void GetCurrentTarget()
+    public void GetCurrentTarget()
     {
         if(targetsInRange.Count <=0)
         {
-            Debug.Log("No Enemys In Range");
             currentTarget = null;
             return;
         }
 
         if(currentTarget != null)
         {
-            currentTarget.OnDeath -= HandleTargetDeath;
+            EnemyBehaviour.OnDeath -= HandleTargetDeath;
         }
 
         currentTarget = currentTargetingStyle switch
@@ -83,7 +79,7 @@ public class RangeCheck : MonoBehaviour
 
         };
 
-        currentTarget.OnDeath += HandleTargetDeath;
+        EnemyBehaviour.OnDeath += HandleTargetDeath;
     }
     public void AddTargetToInRangeList(Enemy target)
     {
@@ -95,6 +91,5 @@ public class RangeCheck : MonoBehaviour
     {
         targetsInRange.Remove(target);
         GetCurrentTarget();
-
     }
 }
