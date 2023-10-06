@@ -19,6 +19,7 @@ public class RangeCheck : MonoBehaviour
 
     [SerializeField] ShootBullet shootBullet = new ShootBullet();
 
+
     private void Start()
     {
         previousTargetingStyle = currentTargetingStyle;
@@ -28,9 +29,11 @@ public class RangeCheck : MonoBehaviour
     {
         if(targetsInRange.Count > 0)
         {
-            Debug.DrawLine(transform.position, currentTarget.transform.position, color: Color.red);
-            transform.LookAt(currentTarget.transform.position);
-            shootBullet.ShootBulletForward(20, 0.5);
+
+                Debug.DrawLine(transform.position, currentTarget.transform.position, color: Color.red);
+                transform.LookAt(currentTarget.transform.position);
+                shootBullet.ShootBulletForward(100, 0.5f);
+            
         }
 
         if(previousTargetingStyle != currentTargetingStyle)
@@ -49,10 +52,11 @@ public class RangeCheck : MonoBehaviour
         Debug.Log("Attack Style Switched To " + currentTargetingStyle);
     }
 
-    private void HandleTargetDeath()
+    public void HandleTargetDeath()
     {
         currentTarget.OnDeath -= HandleTargetDeath;
         GetCurrentTarget();
+        
     }
 
     private void GetCurrentTarget()

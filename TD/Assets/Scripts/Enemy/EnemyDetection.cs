@@ -17,7 +17,7 @@ public class EnemyDetection : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            Debug.Log("Enemy In Range");
+           // Debug.Log("Enemy In Range");
 
             rangeCheck.AddTargetToInRangeList(other.GetComponent<Enemy>());
         }
@@ -27,7 +27,7 @@ public class EnemyDetection : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            Debug.Log("Enemy Out Of Range");
+           // Debug.Log("Enemy Out Of Range");
 
             rangeCheck.RemoveTargetFromInRangeList(other.GetComponent<Enemy>());
 

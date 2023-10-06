@@ -20,9 +20,9 @@ public class Enemy : MonoBehaviour
     }
     private IEnumerator DeathRoutine()
     {
-        OnDeath?.Invoke();
-
-        yield return new WaitForSeconds(1f);
+        OnDeath.Invoke();
+        Debug.Log("Death?");
+        yield return new WaitForSeconds(0f);
     }
 
 

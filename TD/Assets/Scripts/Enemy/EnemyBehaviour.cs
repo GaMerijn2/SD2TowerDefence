@@ -1,40 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyBehaviour : MonoBehaviour
 {
+    [SerializeField] int health = 100;
+    [SerializeField] RangeCheck rangeCheck;
 
-    public GameObject a, b;
-    //  public int WaitTime;
-    private Vector3 velocity;
-    public float speed = 0.5f;
     private void Start()
     {
-        SetPosToA();
     }
     private void Update()
     {
-        SetDirection();
-    }
-    void SetDirection()
-    {
-        Vector3 Direction = b.transform.position - this.transform.position;
-        float Distance = Direction.magnitude;
-        Vector3 norm_direction = Direction.normalized;
-
-        velocity = norm_direction * speed;
-        this.transform.position += velocity * Time.deltaTime;
-        //float angle = Mathf.Atan2(velocity.y, velocity.x);
-       // this.transform.localEulerAngles = new Vector3(0, 0, angle * Mathf.Rad2Deg);
-
-        if (Distance < velocity.magnitude * Time.deltaTime)
+        if (rangeCheck ??= null)
         {
-            SetPosToA();
+           // rangeCheck = GetComponent<RangeCheck>();
+            rangeCheck = FindObjectOfType<RangeCheck>();
+
+        }
+        if (health <= 0)
+        {
+            rangeCheck.HandleTargetDeath();
+
         }
     }
-    void SetPosToA()
+    private void OnTriggerEnter(Collider trigger)
     {
-        this.transform.position = a.transform.position; // set enemy pos to point a pos
+        rangeCheck = FindObjectOfType<RangeCheck>();
+
+        Debug.Log(trigger.gameObject.name);
+        if (trigger.gameObject.name == "BulletObj")
+        {
+            Debug.Log("Enemy hit");
+            health -= 100;
+            Debug.Log("EnemyHealth: " + health);
+            if (health <= 0)
+            {
+                rangeCheck.HandleTargetDeath();
+
+            }
+        }
     }
 }

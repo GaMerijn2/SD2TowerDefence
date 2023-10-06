@@ -9,28 +9,36 @@ public class ShootBullet : MonoBehaviour
     GameObject bullet;
 
     [SerializeField]
-    bool canAttack = true;
+    bool canAttack = false;
 
     [SerializeField]
     float bulletSpeed;
 
     [SerializeField]
     float attackCooldown;
-
-    public void ShootBulletForward( float speed, float attackCooldown)
+    private void Start()
     {
-        if (canAttack)
+        canAttack = false;
+    }
+    public void ShootBulletForward( float speed, float cooldown)
+    {
+        if (!canAttack)
         {
+           // Debug.Log("Bullet shot");
+
             bulletSpeed = speed;
+            attackCooldown = cooldown;
             GameObject currentBullet = Instantiate(bullet, transform.position, Quaternion.identity);
+            currentBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed, ForceMode.Impulse);
 
-
-            currentBullet.GetComponent<Rigidbody>().AddForce(new Vector3(0, 0, 0) * bulletSpeed, ForceMode.Impulse);
+            canAttack = true;
             Invoke(nameof(resetAttack), attackCooldown);
         }
     }
     private void resetAttack()
     {
-        canAttack = true;
+       // Debug.Log("Cooldown Reset");
+        canAttack = false;
     }
+
 }
