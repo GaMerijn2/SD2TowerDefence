@@ -7,40 +7,40 @@ using System;
 
 public class EnemyBehaviour : MonoBehaviour
 {
-    [SerializeField] int health = 100;
-    [SerializeField] RangeCheck rangeCheck;
+    [SerializeField] public int health = 100;
+    [SerializeField] RangeCheck[] rangeChecks;
 
     public static event Action OnDeath;
 
-    private void Start()
-    {
-
-        
-    }
     private void Update()
     {
-        if (rangeCheck ??= null)
-        {
-            rangeCheck = FindObjectOfType<RangeCheck>();
+        rangeChecks = FindObjectsOfType<RangeCheck>();
 
-        }
         if (health <= 0)
         {
-            rangeCheck.HandleTargetDeath();
-            OnDeath.Invoke();
-            Destroy(this.gameObject,0f);
-            rangeCheck.RemoveTargetFromInRangeList(GetComponent<Enemy>());
+            //rangeCheck.HandleTargetDeath();
+            OnDeath?.Invoke();
+            Cash.cashAmount += (50);
+           // EnemyGiveCash.MoneyDisplay.text = "Money: " + Cash.cashAmount.ToString();
 
-            rangeCheck.GetCurrentTarget();
+            Destroy(this.gameObject,0f);
+
+            for (int i = 0; i < rangeChecks.Length; ++i)
+            {
+                rangeChecks[i].RemoveTargetFromInRangeList(GetComponent<Enemy>());
+                rangeChecks[i].GetCurrentTarget();
+            }
         }
     }
     private void OnTriggerEnter(Collider trigger)
     {
-        rangeCheck = FindObjectOfType<RangeCheck>();
-
         if (trigger.gameObject.name == "BulletObj")
         {
             health -= 10;
+        }
+        if (trigger.gameObject.name == "EndPoint")
+        {
+            health -= 100;
         }
     }
 }

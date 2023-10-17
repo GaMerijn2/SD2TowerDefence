@@ -10,6 +10,7 @@ public class TowerPlacer : MonoBehaviour
     [SerializeField] private LayerMask whatIsAGridLayer;
     [SerializeField] private LayerMask PlacementCheck;
     [SerializeField] private LayerMask PlacementCollide;
+    [SerializeField] public AudioSource placeSound;
 
 
 
@@ -53,5 +54,6 @@ public class TowerPlacer : MonoBehaviour
     {
         Debug.Log("Place Tower");
         CurrentPlacingTower = Instantiate(Tower, Vector3.zero, Quaternion.identity);
+        placeSound.Play();
     }
 }

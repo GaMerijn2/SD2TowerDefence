@@ -8,11 +8,6 @@ public class CamMovement : MonoBehaviour
     public CharacterController controller;
     public float speed = 5;
 
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {

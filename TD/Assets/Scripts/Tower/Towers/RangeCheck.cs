@@ -33,7 +33,7 @@ public class RangeCheck : MonoBehaviour
             {
                 Debug.DrawLine(transform.position, currentTarget.transform.position, color: Color.red);
                 transform.LookAt(currentTarget.transform.position);
-                shootBullet.ShootBulletForward(100, 0.5f);
+                shootBullet.ShootBulletForward(100, shootBullet.attackCooldown);
             }
         }
 
@@ -52,6 +52,7 @@ public class RangeCheck : MonoBehaviour
 
     public void HandleTargetDeath()
     {
+        Debug.Log("!!!");
         EnemyBehaviour.OnDeath -= HandleTargetDeath;
         GetCurrentTarget();
     }

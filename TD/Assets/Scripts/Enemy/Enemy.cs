@@ -8,27 +8,12 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
     public int BaseHealth { get;  set; }
-
     public event Action OnDeath;
     private NavMeshAgent agent;
-
 
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         agent.SetDestination(GameObject.FindWithTag("EndPoint").transform.position);
     }
-
-    /*
-    private IEnumerator DeathRoutine()
-    {
-        OnDeath.Invoke();
-        Debug.Log("Death?");
-        yield return new WaitForSeconds(0f);
-    }*/
-
-
-
-
-
 }

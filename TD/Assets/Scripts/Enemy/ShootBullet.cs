@@ -15,7 +15,10 @@ public class ShootBullet : MonoBehaviour
     float bulletSpeed;
 
     [SerializeField]
-    float attackCooldown;
+    public float attackCooldown = 1f;
+
+    [SerializeField]
+    AudioSource bulletsound;
     private void Start()
     {
         canAttack = false;
@@ -29,6 +32,7 @@ public class ShootBullet : MonoBehaviour
             attackCooldown = cooldown;
             GameObject currentBullet = Instantiate(bullet, transform.position, Quaternion.identity);
             currentBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed, ForceMode.Impulse);
+            bulletsound.Play();
 
             canAttack = true;
             Invoke(nameof(resetAttack), attackCooldown);
