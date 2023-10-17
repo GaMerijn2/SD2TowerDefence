@@ -9,28 +9,38 @@ public class ShootBullet : MonoBehaviour
     GameObject bullet;
 
     [SerializeField]
-    bool canAttack = true;
+    bool canAttack = false;
 
     [SerializeField]
     float bulletSpeed;
 
     [SerializeField]
-    float attackCooldown;
+    public float attackCooldown = 1f;
 
-    public void ShootBulletForward( float speed, float attackCooldown)
+    [SerializeField]
+    AudioSource bulletsound;
+    private void Start()
     {
-        if (canAttack)
+        canAttack = false;
+    }
+    public void ShootBulletForward( float speed, float cooldown)
+    {
+        if (!canAttack)
         {
+
             bulletSpeed = speed;
+            attackCooldown = cooldown;
             GameObject currentBullet = Instantiate(bullet, transform.position, Quaternion.identity);
+            currentBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed, ForceMode.Impulse);
+            bulletsound.Play();
 
-
-            currentBullet.GetComponent<Rigidbody>().AddForce(new Vector3(0, 0, 0) * bulletSpeed, ForceMode.Impulse);
+            canAttack = true;
             Invoke(nameof(resetAttack), attackCooldown);
         }
     }
     private void resetAttack()
     {
-        canAttack = true;
+        canAttack = false;
     }
+
 }

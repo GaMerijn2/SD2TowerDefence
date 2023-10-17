@@ -1,40 +1,46 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using System;
+
 
 public class EnemyBehaviour : MonoBehaviour
 {
+    [SerializeField] public int health = 100;
+    [SerializeField] RangeCheck[] rangeChecks;
 
-    public GameObject a, b;
-    //  public int WaitTime;
-    private Vector3 velocity;
-    public float speed = 0.5f;
-    private void Start()
-    {
-        SetPosToA();
-    }
+    public static event Action OnDeath;
+
     private void Update()
     {
-        SetDirection();
-    }
-    void SetDirection()
-    {
-        Vector3 Direction = b.transform.position - this.transform.position;
-        float Distance = Direction.magnitude;
-        Vector3 norm_direction = Direction.normalized;
+        rangeChecks = FindObjectsOfType<RangeCheck>();
 
-        velocity = norm_direction * speed;
-        this.transform.position += velocity * Time.deltaTime;
-        //float angle = Mathf.Atan2(velocity.y, velocity.x);
-       // this.transform.localEulerAngles = new Vector3(0, 0, angle * Mathf.Rad2Deg);
-
-        if (Distance < velocity.magnitude * Time.deltaTime)
+        if (health <= 0)
         {
-            SetPosToA();
+            //rangeCheck.HandleTargetDeath();
+            OnDeath?.Invoke();
+            Cash.cashAmount += (50);
+           // EnemyGiveCash.MoneyDisplay.text = "Money: " + Cash.cashAmount.ToString();
+
+            Destroy(this.gameObject,0f);
+
+            for (int i = 0; i < rangeChecks.Length; ++i)
+            {
+                rangeChecks[i].RemoveTargetFromInRangeList(GetComponent<Enemy>());
+                rangeChecks[i].GetCurrentTarget();
+            }
         }
     }
-    void SetPosToA()
+    private void OnTriggerEnter(Collider trigger)
     {
-        this.transform.position = a.transform.position; // set enemy pos to point a pos
+        if (trigger.gameObject.name == "BulletObj")
+        {
+            health -= 10;
+        }
+        if (trigger.gameObject.name == "EndPoint")
+        {
+            health -= 100;
+        }
     }
 }

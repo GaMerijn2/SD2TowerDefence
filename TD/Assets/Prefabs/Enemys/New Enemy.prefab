@@ -189,8 +189,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4525671693261622126}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -199,7 +199,7 @@ Transform:
   - {fileID: 6960356583846737102}
   m_Father: {fileID: 6331081526627410221}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &5699836808892515954
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,6 +329,7 @@ GameObject:
   - component: {fileID: 8318877683252617876}
   - component: {fileID: 2609998498105210957}
   - component: {fileID: 8906324575946639042}
+  - component: {fileID: -1147677558265485497}
   m_Layer: 8
   m_Name: New Enemy
   m_TagString: Enemy
@@ -402,14 +403,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6331081526627410220}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9109da61c5e38748b95d807a964b526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  a: {fileID: 0}
-  b: {fileID: 0}
-  speed: 25
+  health: 100
+  rangeCheck: {fileID: 0}
 --- !u!65 &7236863970663390561
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -418,11 +418,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6331081526627410220}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.0407047, y: 1.5454388, z: 2.1784363}
-  m_Center: {x: 0.23723526, y: 0.27271903, z: 0.020116141}
+  m_Size: {x: 1.9515724, y: 1.5454388, z: 3.7512841}
+  m_Center: {x: 0.017640686, y: 0.272719, z: -0.0006144524}
 --- !u!54 &8318877683252617876
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -450,7 +450,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 25
-  m_Acceleration: 8
+  m_Acceleration: 15
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -473,3 +473,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48ce2d64aed4ec84a9d17fb517bff1ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-1147677558265485497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6331081526627410220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7206c0202fd2be4c8601e3c12516f22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wobbleAngle: 7
+  wobbleSpeed: 10
