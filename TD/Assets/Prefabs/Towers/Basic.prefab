@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7735515163504939297}
   - component: {fileID: 7735515163504939298}
   - component: {fileID: 7735515163504939299}
-  m_Layer: 7
+  m_Layer: 5
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7735515163917947639}
-  m_Layer: 7
+  m_Layer: 5
   m_Name: TowerHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 7735515164245579320}
   - component: {fileID: 3257973263994451006}
   - component: {fileID: 3829857274641544137}
-  m_Layer: 7
+  m_Layer: 5
   m_Name: Basic
   m_TagString: CantPlace
   m_Icon: {fileID: 0}
@@ -177,7 +177,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c4784722a9215b4e839cdb20bc30979, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
+  LookatObject: {fileID: 0}
+  ChildObj: 0
 --- !u!65 &3829857274641544137
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -203,7 +204,7 @@ GameObject:
   - component: {fileID: 7735515164680195948}
   - component: {fileID: 7735515164680195949}
   - component: {fileID: 7735515164680195950}
-  m_Layer: 7
+  m_Layer: 5
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -300,7 +301,7 @@ GameObject:
   - component: {fileID: 7735515164962803078}
   - component: {fileID: 7735515164962803079}
   - component: {fileID: 7735515164962803072}
-  m_Layer: 7
+  m_Layer: 5
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -394,7 +395,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7735515165216503907}
-  m_Layer: 7
+  m_Layer: 5
   m_Name: TowerStand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -430,7 +431,7 @@ GameObject:
   - component: {fileID: 7735515165420590634}
   - component: {fileID: 7735515165420590635}
   - component: {fileID: 7735515165420590628}
-  m_Layer: 7
+  m_Layer: 5
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -524,7 +525,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7735515165500146182}
-  m_Layer: 7
+  m_Layer: 5
   m_Name: HeadPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}

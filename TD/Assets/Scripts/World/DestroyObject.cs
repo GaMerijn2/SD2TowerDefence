@@ -5,6 +5,7 @@ using UnityEngine;
 public class DestroyObject : MonoBehaviour
 {
     bool destroyBool;
+    [SerializeField] public int destroyCooldown = 4;
    
     void Start()
     {
@@ -28,7 +29,7 @@ public class DestroyObject : MonoBehaviour
 
         destroyBool = false;
 
-        Invoke(nameof(DestroyObjects), 4);
+        Invoke(nameof(DestroyObjects), destroyCooldown);
 
     }
 

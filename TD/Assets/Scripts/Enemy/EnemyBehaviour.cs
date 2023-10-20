@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using System;
-
+using UnityEngine.UIElements;
 
 public class EnemyBehaviour : MonoBehaviour
 {
     [SerializeField] public int health = 100;
     [SerializeField] RangeCheck[] rangeChecks;
+    [SerializeField] private Animator animator;
+    [SerializeField] private GameObject Explo;
 
     public static event Action OnDeath;
 
@@ -21,8 +23,10 @@ public class EnemyBehaviour : MonoBehaviour
             //rangeCheck.HandleTargetDeath();
             OnDeath?.Invoke();
             Cash.cashAmount += (50);
-           // EnemyGiveCash.MoneyDisplay.text = "Money: " + Cash.cashAmount.ToString();
+            // EnemyGiveCash.MoneyDisplay.text = "Money: " + Cash.cashAmount.ToString();
 
+            Instantiate(Explo, transform.position + new Vector3(0,40,0), Quaternion.identity);
+            animator.Play("Explosion");
             Destroy(this.gameObject,0f);
 
             for (int i = 0; i < rangeChecks.Length; ++i)
