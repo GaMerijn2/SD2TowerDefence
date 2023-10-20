@@ -9,6 +9,9 @@ TagManager:
   - EndPoint
   - Enemy
   - Bullet
+  - Path
+  - Path2
+  - Path3
   layers:
   - Default
   - TransparentFX
@@ -21,7 +24,7 @@ TagManager:
   - Enemy
   - Indicator
   - Borders
-  - 
+  - TowerDisplay
   - 
   - 
   - 

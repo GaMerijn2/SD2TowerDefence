@@ -24,8 +24,9 @@ public class EnemyBehaviour : MonoBehaviour
             OnDeath?.Invoke();
             Cash.cashAmount += (50);
             // EnemyGiveCash.MoneyDisplay.text = "Money: " + Cash.cashAmount.ToString();
-            animator.Play("Explosion");
+
             Instantiate(Explo, transform.position + new Vector3(0,40,0), Quaternion.identity);
+            animator.Play("Explosion");
             Destroy(this.gameObject,0f);
 
             for (int i = 0; i < rangeChecks.Length; ++i)

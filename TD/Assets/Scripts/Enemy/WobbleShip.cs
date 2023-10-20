@@ -33,7 +33,7 @@ public class WobbleShip : MonoBehaviour
         }
 
         // Apply the rotation to the ship's Transform
-        transform.rotation = Quaternion.Euler(0.0f, 0.0f, currentAngle);
+        transform.rotation = Quaternion.Euler(this.transform.rotation.x, this.transform.rotation.y, currentAngle);
     }
 }
 
