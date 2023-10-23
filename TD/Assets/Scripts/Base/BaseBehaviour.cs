@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BaseBehaviour : MonoBehaviour
 {
@@ -32,6 +33,7 @@ public class BaseBehaviour : MonoBehaviour
             if (this.health <= 0)
             {
                 loseSound.Play();
+                SceneManager.LoadScene("EndMenuScene");
             }
         }
     }

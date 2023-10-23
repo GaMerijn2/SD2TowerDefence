@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 3856693997566562772}
   m_Layer: 8
   m_Name: ScoutShip
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -331,6 +331,7 @@ GameObject:
   - component: {fileID: -1147677558265485497}
   - component: {fileID: 288038038584637681}
   - component: {fileID: -3267903502713627778}
+  - component: {fileID: 1714177631400031377}
   m_Layer: 8
   m_Name: New Enemy
   m_TagString: Enemy
@@ -517,6 +518,18 @@ MonoBehaviour:
   waypoints1: []
   waypoints2: []
   waypoints3: []
+--- !u!114 &1714177631400031377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6331081526627410220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48ce2d64aed4ec84a9d17fb517bff1ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6833534250843652574
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -528,6 +541,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Explo0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628283962017858141, guid: 83864150628656249bc0a402f0aa082f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5442939884829702477, guid: 83864150628656249bc0a402f0aa082f,
         type: 3}

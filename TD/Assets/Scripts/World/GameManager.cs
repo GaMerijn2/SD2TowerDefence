@@ -5,14 +5,32 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
-    private GameObject enemyPrefab;
-
-    [SerializeField]
     private Transform spawnLocation;
+    public GameObject enemyPrefab;  // Reference to your enemy prefab.
+    public float timeBetweenWaves = 5f;
+    public int totalWaves = 5;
 
-    void Update()
+    private int currentWave = 0;
+
+    private void Start()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        StartCoroutine(StartWaves());
+    }
+
+    private IEnumerator StartWaves()
+    {
+        while (currentWave < totalWaves)
+        {
+            SpawnWave();
+            yield return new WaitForSeconds(timeBetweenWaves);
+        }
+    }
+
+    private void SpawnWave()
+    {
+        currentWave++;
+
+        for (int i = 0; i < currentWave; i++)
         {
             SpawnEnemy();
         }
@@ -22,4 +40,5 @@ public class GameManager : MonoBehaviour
     {
         Instantiate(enemyPrefab, spawnLocation.transform.position, Quaternion.identity);
     }
+
 }

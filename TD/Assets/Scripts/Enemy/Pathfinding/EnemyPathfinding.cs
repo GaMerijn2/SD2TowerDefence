@@ -11,10 +11,12 @@ public class EnemyPathfinding : MonoBehaviour
 
     NavMeshAgent agent;
     [SerializeField] float decisionDelay = 0.5f;
+    [SerializeField] public float WaypointDistance = 100f;
     [SerializeField] public GameObject[] currentWaypoints;
     [SerializeField] public GameObject[] waypoints1;
     [SerializeField] public GameObject[] waypoints2;
     [SerializeField] public GameObject[] waypoints3;
+
     int currentWaypoint = 0;
 
     private void Start()
@@ -33,7 +35,7 @@ public class EnemyPathfinding : MonoBehaviour
         Vector3 Direction = this.transform.position - currentWaypoints[currentWaypoint].transform.position;
        //transform.LookAt(waypoints[currentWaypoint +1].transform.position, Vector3.left);
         Vector3 NormalizedDir = Direction.normalized;
-       if (agent.remainingDistance < 50)
+       if (agent.remainingDistance < WaypointDistance)
         {
             currentWaypoint++;
             ///Debug.Log(currentWaypoint);
