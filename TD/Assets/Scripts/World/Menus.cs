@@ -40,6 +40,7 @@ public class Menus : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenuScene");
     }
+
     public void QuitGame()
     {
         Application.Quit();
