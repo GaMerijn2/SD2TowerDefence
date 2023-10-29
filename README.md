@@ -7,13 +7,13 @@ Product 2:
 My [Root](https://github.com/GaMerijn2/SD2TowerDefence/tree/develop/TD)
 
 Product 3:
-[Release 2.0.0] (https://github.com/GaMerijn2/SD2TowerDefence/releases/tag/game)
+[Release 2.0.0](https://github.com/GaMerijn2/SD2TowerDefence/releases/tag/game)
 
 Product 4:
-A gif of Release 2.0.0 of the game C:\MediaCollege\SD2B\BO\ReadmeVisuals/gameplay_release_2.0.0.gif
+A gif of Release 2.0.0 of the game (https://github.com/GaMerijn2/SD2TowerDefence/blob/develop/ReadmeVisuals/gameplay_release_2.0.0.gif)
 
 Product 5:
-[Link naar een issue] (https://github.com/GaMerijn2/SD2TowerDefence/issues/1)
+[Link naar een issue](https://github.com/GaMerijn2/SD2TowerDefence/issues/1)
 
 Product 6:
 Nog mee bezig
@@ -25,7 +25,7 @@ Product 8:
 Nog mee bezig
 
 Product 9:
-[Link naar mijn Trello] (https://trello.com/b/gdFuLxI2/sd2td)
+[Link naar mijn Trello](https://trello.com/b/gdFuLxI2/sd2td)
 
 
 
