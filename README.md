@@ -10,7 +10,7 @@ Product 3:
 [Release 2.0.0](https://github.com/GaMerijn2/SD2TowerDefence/releases/tag/game)
 
 Product 4:
-[Textures Sprites](ReadmeVisuals/gameplay_release_2.0.0.gif)
+![Textures Sprites](ReadmeVisuals/gameplay_release_2.0.0.gif)
 
 Product 5:
 [Link naar een issue](https://github.com/GaMerijn2/SD2TowerDefence/issues/1)
