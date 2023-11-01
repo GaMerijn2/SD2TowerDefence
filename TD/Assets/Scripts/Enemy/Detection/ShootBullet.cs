@@ -6,19 +6,19 @@ public class ShootBullet : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField]
-    GameObject bullet;
+    private GameObject bullet;
 
     [SerializeField]
-    bool canAttack = false;
+    private bool canAttack = false;
 
     [SerializeField]
-    float bulletSpeed;
+    private float bulletSpeed;
 
     [SerializeField]
     public float attackCooldown = 1f;
 
     [SerializeField]
-    AudioSource bulletsound;
+    private AudioSource bulletSound;
     private void Start()
     {
         canAttack = false;
@@ -32,7 +32,7 @@ public class ShootBullet : MonoBehaviour
             attackCooldown = cooldown;
             GameObject currentBullet = Instantiate(bullet, transform.position, Quaternion.identity);
             currentBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed, ForceMode.Impulse);
-            bulletsound.Play();
+            bulletSound.Play();
 
             canAttack = true;
             Invoke(nameof(resetAttack), attackCooldown);

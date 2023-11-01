@@ -94,6 +94,7 @@ classDiagram
 
 ## Product 8: Prototype test video
 
+![video](ReadmeVisuals/EnemyDetection_Testing.mp4)
 # Product 9: SCRUM planning inschatting 
 
 [Link naar mijn Trello](https://trello.com/b/gdFuLxI2/sd2td)
