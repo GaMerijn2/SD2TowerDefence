@@ -11,7 +11,7 @@ public class EnemyPathfinding : MonoBehaviour
 
     NavMeshAgent agent;
     [SerializeField] float decisionDelay = 0.5f;
-    [SerializeField] public float WaypointDistance = 100f;
+    [SerializeField] public float WaypointDistance = 25f;
     [SerializeField] public GameObject[] currentWaypoints;
     [SerializeField] public GameObject[] waypoints1;
     [SerializeField] public GameObject[] waypoints2;
@@ -21,6 +21,7 @@ public class EnemyPathfinding : MonoBehaviour
 
     private void Start()
     {
+        WaypointDistance = 25f;
         agent = GetComponent<NavMeshAgent>();
 
         waypoints1 = GameObject.FindGameObjectsWithTag("Path");
@@ -38,11 +39,11 @@ public class EnemyPathfinding : MonoBehaviour
        if (agent.remainingDistance < WaypointDistance)
         {
             currentWaypoint++;
-            ///Debug.Log(currentWaypoint);
+            Debug.Log(currentWaypoint);
         }
         if (currentWaypoint == currentWaypoints.Length-1)
         {
-           // currentWaypoint = 0;
+           agent.SetDestination(this.transform.position);
         }
     }
     private void SetPath()

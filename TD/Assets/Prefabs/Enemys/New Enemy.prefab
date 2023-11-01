@@ -493,7 +493,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 679af6ef90da99f4eb6f991b9e95e2d5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -538,6 +538,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6331081526627410221}
     m_Modifications:
+    - target: {fileID: 448354869132462821, guid: 83864150628656249bc0a402f0aa082f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4628283962017858141, guid: 83864150628656249bc0a402f0aa082f,
         type: 3}
       propertyPath: m_Name
@@ -547,6 +552,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628283962017858141, guid: 83864150628656249bc0a402f0aa082f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5442939884829702477, guid: 83864150628656249bc0a402f0aa082f,
         type: 3}

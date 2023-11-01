@@ -10,7 +10,7 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField] public int health = 100;
     [SerializeField] RangeCheck[] rangeChecks;
     [SerializeField] private Animator animator;
-    [SerializeField] private GameObject Explo;
+    [SerializeField] public GameObject Explo;
 
     public static event Action OnDeath;
 
