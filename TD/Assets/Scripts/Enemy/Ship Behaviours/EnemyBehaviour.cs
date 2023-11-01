@@ -22,7 +22,7 @@ public class EnemyBehaviour : MonoBehaviour
         {
             //rangeCheck.HandleTargetDeath();
             OnDeath?.Invoke();
-            Cash.cashAmount += (50);
+           // Cash.cashAmount += (50);
             // EnemyGiveCash.MoneyDisplay.text = "Money: " + Cash.cashAmount.ToString();
 
             Instantiate(Explo, transform.position + new Vector3(0,40,0), Quaternion.identity);

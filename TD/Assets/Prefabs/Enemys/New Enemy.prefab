@@ -331,7 +331,7 @@ GameObject:
   - component: {fileID: -1147677558265485497}
   - component: {fileID: 288038038584637681}
   - component: {fileID: -3267903502713627778}
-  - component: {fileID: 7822582860212154555}
+  - component: {fileID: -7299143032717257500}
   m_Layer: 8
   m_Name: New Enemy
   m_TagString: Enemy
@@ -519,7 +519,7 @@ MonoBehaviour:
   waypoints1: []
   waypoints2: []
   waypoints3: []
---- !u!114 &7822582860212154555
+--- !u!114 &-7299143032717257500
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
