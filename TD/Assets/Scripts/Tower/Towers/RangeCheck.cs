@@ -31,12 +31,10 @@ public class RangeCheck : MonoBehaviour
         {
             if(currentTarget != null)
             {
-                Debug.Log("Target is not null");
                 Debug.DrawLine(transform.position, currentTarget.transform.position, color: Color.red);
                 transform.LookAt(currentTarget.transform.position);
                 shootBullet.ShootBulletForward(100, shootBullet.attackCooldown);
             }
-            Debug.Log("Target is null");
         }
 
         if(previousTargetingStyle != currentTargetingStyle)
@@ -54,7 +52,6 @@ public class RangeCheck : MonoBehaviour
 
     public void HandleTargetDeath()
     {
-        Debug.Log("!!!");
         EnemyBehaviour.OnDeath -= HandleTargetDeath;
         GetCurrentTarget();
     }

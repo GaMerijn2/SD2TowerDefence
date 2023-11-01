@@ -325,12 +325,12 @@ GameObject:
   - component: {fileID: 6331081526627410221}
   - component: {fileID: 6331081526627410216}
   - component: {fileID: 6331081526627410218}
+  - component: {fileID: -3267903502713627778}
+  - component: {fileID: -1147677558265485497}
+  - component: {fileID: 2609998498105210957}
   - component: {fileID: 7236863970663390561}
   - component: {fileID: 8318877683252617876}
-  - component: {fileID: 2609998498105210957}
-  - component: {fileID: -1147677558265485497}
   - component: {fileID: 288038038584637681}
-  - component: {fileID: -3267903502713627778}
   - component: {fileID: -7299143032717257500}
   m_Layer: 8
   m_Name: New Enemy
@@ -415,6 +415,60 @@ MonoBehaviour:
   rangeChecks: []
   animator: {fileID: 288038038584637681}
   Explo: {fileID: 4628283962017858141, guid: 83864150628656249bc0a402f0aa082f, type: 3}
+--- !u!114 &-3267903502713627778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6331081526627410220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3b96729fa4227d418c9b52ebe7cdc3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  decisionDelay: 0.5
+  WaypointDistance: 100
+  currentWaypoints: []
+  waypoints1: []
+  waypoints2: []
+  waypoints3: []
+--- !u!114 &-1147677558265485497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6331081526627410220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7206c0202fd2be4c8601e3c12516f22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wobbleAngle: 7
+  wobbleSpeed: 10
+--- !u!195 &2609998498105210957
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6331081526627410220}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 1
+  m_Speed: 25
+  m_Acceleration: 25
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 5
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!65 &7236863970663390561
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -444,42 +498,6 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!195 &2609998498105210957
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6331081526627410220}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 1
-  m_Speed: 25
-  m_Acceleration: 25
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 5
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!114 &-1147677558265485497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6331081526627410220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7206c0202fd2be4c8601e3c12516f22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wobbleAngle: 7
-  wobbleSpeed: 10
 --- !u!95 &288038038584637681
 Animator:
   serializedVersion: 5
@@ -501,24 +519,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-3267903502713627778
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6331081526627410220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3b96729fa4227d418c9b52ebe7cdc3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  decisionDelay: 0.5
-  WaypointDistance: 100
-  currentWaypoints: []
-  waypoints1: []
-  waypoints2: []
-  waypoints3: []
 --- !u!114 &-7299143032717257500
 MonoBehaviour:
   m_ObjectHideFlags: 0

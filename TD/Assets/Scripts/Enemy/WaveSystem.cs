@@ -19,6 +19,13 @@ public class WaveSystem : MonoBehaviour
         timeBetweenWaves = 10f;
         StartCoroutine(StartWaves());
     }
+    private void Update()
+    {
+        if(Input.GetKeyUp(KeyCode.Space)) 
+        { 
+        SpawnEnemy();
+        }
+    }
 
     private IEnumerator StartWaves()
     {
@@ -44,4 +51,6 @@ public class WaveSystem : MonoBehaviour
         GameObject enemy = Instantiate(enemyPrefab, waypoints[0].position, Quaternion.identity);
         //enemy.GetComponent<EnemyMovement>().SetWaypoints(waypoints);
     }
+
+
 }

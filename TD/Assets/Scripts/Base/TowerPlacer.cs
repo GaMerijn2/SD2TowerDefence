@@ -11,6 +11,9 @@ public class TowerPlacer : MonoBehaviour
     [SerializeField] private LayerMask PlacementCheck;
     [SerializeField] private LayerMask PlacementCollide;
     [SerializeField] public AudioSource placeSound;
+    [SerializeField] private bool canPlace;
+    [SerializeField] private float towerCooldown;
+
 
 
 
@@ -18,6 +21,8 @@ public class TowerPlacer : MonoBehaviour
     void Start()
     {
         gameGrid = FindObjectOfType<GameGrid>();
+        canPlace = true;
+        towerCooldown = 3f;
     }
     void Update()
     {
@@ -30,7 +35,7 @@ public class TowerPlacer : MonoBehaviour
             {
                 CurrentPlacingTower.transform.position = HitInfo.point;
             }
-            if (Input.GetMouseButtonDown(0) && HitInfo.collider.gameObject != null)
+            if (Input.GetMouseButtonDown(0) && HitInfo.collider.gameObject != null && canPlace)
             {
                 if (!HitInfo.collider.gameObject.CompareTag("CantPlace"))
                 {
@@ -42,7 +47,10 @@ public class TowerPlacer : MonoBehaviour
                     if (Physics.CheckBox(BoxCenter, HalfExtents, Quaternion.identity, PlacementCheck, QueryTriggerInteraction.Ignore))
                     {
                         TowerCollider.isTrigger = false;
+                        placeSound.Play();
                         CurrentPlacingTower = null;
+                        canPlace = false;
+                        Invoke(nameof(resetPlacement), towerCooldown);
 
                     }
 
@@ -50,10 +58,14 @@ public class TowerPlacer : MonoBehaviour
             }
         }
     }
+    private void resetPlacement()
+    {
+        canPlace = true;
+    }
     public void SetTowerOfPlace(GameObject Tower)
     {
         Debug.Log("Place Tower");
         CurrentPlacingTower = Instantiate(Tower, Vector3.zero, Quaternion.identity);
-        placeSound.Play();
+
     }
 }

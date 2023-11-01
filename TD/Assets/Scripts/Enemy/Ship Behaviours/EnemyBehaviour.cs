@@ -20,14 +20,13 @@ public class EnemyBehaviour : MonoBehaviour
 
         if (health <= 0)
         {
-            //rangeCheck.HandleTargetDeath();
             OnDeath?.Invoke();
-           // Cash.cashAmount += (50);
-            // EnemyGiveCash.MoneyDisplay.text = "Money: " + Cash.cashAmount.ToString();
-
             Instantiate(Explo, transform.position + new Vector3(0,40,0), Quaternion.identity);
             animator.Play("Explosion");
-            Destroy(this.gameObject,0f);
+            //animator.Play("Sinking");
+            float currInfo = animator.GetCurrentAnimatorStateInfo(0).length;
+            Debug.Log(currInfo);
+           Invoke(nameof(KillEnemy),0f);
 
             for (int i = 0; i < rangeChecks.Length; ++i)
             {
@@ -36,11 +35,20 @@ public class EnemyBehaviour : MonoBehaviour
             }
         }
     }
+    private void KillEnemy()
+    {
+        Destroy(this.gameObject);
+
+    }
     private void OnTriggerEnter(Collider trigger)
     {
         if (trigger.gameObject.name == "BulletObj")
         {
             health -= 10;
+        }
+        if (trigger.gameObject.name == "FastBulletObj")
+        {
+            health -= 3;
         }
         if (trigger.gameObject.name == "EndPoint")
         {
