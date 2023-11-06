@@ -32774,7 +32774,7 @@ MonoBehaviour:
   canAttack: 1
   bulletSpeed: 10
   attackCooldown: 1
-  bulletsound: {fileID: 7288525728449796055}
+  bulletSound: {fileID: 0}
 --- !u!33 &1474865811613649993
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -33402,7 +33402,7 @@ MonoBehaviour:
   canAttack: 1
   bulletSpeed: 10
   attackCooldown: 0.25
-  bulletsound: {fileID: 5717681948324129963}
+  bulletSound: {fileID: 0}
 --- !u!1 &4564298408081347406
 GameObject:
   m_ObjectHideFlags: 0

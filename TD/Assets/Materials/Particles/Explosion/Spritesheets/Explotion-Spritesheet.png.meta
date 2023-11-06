@@ -1,0 +1,405 @@
+fileFormatVersion: 2
+guid: cfc40747803f52841a6c41283e41f0e5
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Explotion-Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 1029
+        width: 510
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1ceb88c844b61e44a8b793d84df7b96
+      internalID: 73147341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explotion-Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 1080
+        width: 376
+        height: 365
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 598cf0af171b58542b247a4817ff80b9
+      internalID: -1252300709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explotion-Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 1661
+        y: 1193
+        width: 285
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ad5c15dce28ca84eac1b63ea3947c5d
+      internalID: 1224553328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explotion-Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 1166
+        width: 215
+        height: 211
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 540ed44fb1ef6a54ab3cda3695acc1f7
+      internalID: 2093085585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explotion-Spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 515
+        width: 520
+        height: 531
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32f6b06cfb8ace64c8ed18fc6cd68e2a
+      internalID: 428821442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explotion-Spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 516
+        width: 513
+        height: 531
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e95e68efc9bbbe4faf53334c27cd203
+      internalID: 1261763785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explotion-Spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 1036
+        y: 515
+        width: 505
+        height: 513
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fc3c474ed66b44418b19243d02b12e0
+      internalID: 288213920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explotion-Spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 1742
+        y: 740
+        width: 96
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a16b2a19549969f4ba724a7e02353760
+      internalID: -584307168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explotion-Spritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 513
+        height: 513
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 954a3082873a053459c0f82f5d2600dd
+      internalID: 16085257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explotion-Spritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 0
+        width: 535
+        height: 514
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80858f536fa4272418dc1d7d76e4800f
+      internalID: 772370748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explotion-Spritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 1
+        width: 504
+        height: 513
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ed262449549b5e4897894ca2a18171d
+      internalID: 757162134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 4418f939af968ab4b9880313ba1ac7cc
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Explotion-Spritesheet_0: -1946538242
+      Explotion-Spritesheet_1: 73147341
+      Explotion-Spritesheet_10: 2093085585
+      Explotion-Spritesheet_11: -399795860
+      Explotion-Spritesheet_12: 1838727857
+      Explotion-Spritesheet_13: 670755027
+      Explotion-Spritesheet_14: 1250600369
+      Explotion-Spritesheet_15: -1478815633
+      Explotion-Spritesheet_16: 59916964
+      Explotion-Spritesheet_17: 1552036193
+      Explotion-Spritesheet_18: -1486422646
+      Explotion-Spritesheet_19: 431101583
+      Explotion-Spritesheet_2: 521864644
+      Explotion-Spritesheet_20: -56019753
+      Explotion-Spritesheet_21: 558469455
+      Explotion-Spritesheet_22: 428821442
+      Explotion-Spritesheet_23: 390401678
+      Explotion-Spritesheet_24: -2089093354
+      Explotion-Spritesheet_25: -956590437
+      Explotion-Spritesheet_26: 1261763785
+      Explotion-Spritesheet_27: 741063756
+      Explotion-Spritesheet_28: -1621693586
+      Explotion-Spritesheet_29: 288213920
+      Explotion-Spritesheet_3: -1252300709
+      Explotion-Spritesheet_30: 1839457411
+      Explotion-Spritesheet_31: -2023844408
+      Explotion-Spritesheet_32: -584307168
+      Explotion-Spritesheet_33: 16085257
+      Explotion-Spritesheet_34: 985416711
+      Explotion-Spritesheet_35: 254727231
+      Explotion-Spritesheet_36: 772370748
+      Explotion-Spritesheet_37: 757162134
+      Explotion-Spritesheet_38: 1021025611
+      Explotion-Spritesheet_39: -1849045712
+      Explotion-Spritesheet_4: 1904265902
+      Explotion-Spritesheet_40: 1702612934
+      Explotion-Spritesheet_41: -634264510
+      Explotion-Spritesheet_42: 620871520
+      Explotion-Spritesheet_43: 1929826132
+      Explotion-Spritesheet_44: 981437385
+      Explotion-Spritesheet_45: -765084721
+      Explotion-Spritesheet_46: -721453942
+      Explotion-Spritesheet_47: 442492543
+      Explotion-Spritesheet_48: -1644330955
+      Explotion-Spritesheet_49: -583836833
+      Explotion-Spritesheet_5: 1256883437
+      Explotion-Spritesheet_50: -642788643
+      Explotion-Spritesheet_6: 184625485
+      Explotion-Spritesheet_7: 1224553328
+      Explotion-Spritesheet_8: -275888277
+      Explotion-Spritesheet_9: -906607543
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
