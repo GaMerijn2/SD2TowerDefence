@@ -15,11 +15,11 @@ public class CamMovement : MonoBehaviour
     }
     void CamMove()
     {
-        float UpDown = Input.GetAxisRaw("Mouse ScrollWheel");
+        float UpDown = Input.GetAxisRaw("Mouse ScrollWheel") * 10f;
 
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
-        Vector3 direction = new Vector3(horizontal, UpDown * 2, vertical).normalized;
+        Vector3 direction = new Vector3(horizontal, UpDown, vertical).normalized;
 
         direction = direction * speed;
 
