@@ -23,6 +23,7 @@ namespace Bitgem.VFX.StylisedWater
             var instance = WaterVolumeHelper ? WaterVolumeHelper : WaterVolumeHelper.Instance;
             if (!instance)
             {
+                Debug.Log("THe instance isnt initiated?");
                 return;
             }
 
