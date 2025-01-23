@@ -136,7 +136,6 @@ GameObject:
   - component: {fileID: 82896061}
   - component: {fileID: 82896060}
   - component: {fileID: 82896059}
-  - component: {fileID: 82896058}
   - component: {fileID: 82896063}
   m_Layer: 0
   m_Name: SeaObject
@@ -145,18 +144,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &82896058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 82896057}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f65945d92f5878e41b3ec57f6e52482b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &82896059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1178,8 +1165,8 @@ Terrain:
   m_TreeBillboardDistance: 5
   m_TreeCrossFadeLength: 6
   m_TreeMaximumFullLODCount: 926
-  m_DetailObjectDistance: 14
-  m_DetailObjectDensity: 0.4
+  m_DetailObjectDistance: 57
+  m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
   m_HeightmapMaximumLOD: 0
