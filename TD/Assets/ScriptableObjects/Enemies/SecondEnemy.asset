@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96e2b71c9f6bfbe4296bafd24793d844, type: 3}
+  m_Name: SecondEnemy
+  m_EditorClassIdentifier: 
+  enemyStats:
+    name: RedRubberto
+    prefab: {fileID: 6018077541945464217, guid: 2264f402405ff26449f935af970e93b9,
+      type: 3}
+    speed: 4
+    health: 25

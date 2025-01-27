@@ -34,7 +34,6 @@ public class EnemyPathfinding : MonoBehaviour
     {
         agent.SetDestination(currentWaypoints[currentWaypoint].transform.position);
         Vector3 Direction = this.transform.position - currentWaypoints[currentWaypoint].transform.position;
-       //transform.LookAt(waypoints[currentWaypoint +1].transform.position, Vector3.left);
         Vector3 NormalizedDir = Direction.normalized;
        if (agent.remainingDistance < WaypointDistance)
         {

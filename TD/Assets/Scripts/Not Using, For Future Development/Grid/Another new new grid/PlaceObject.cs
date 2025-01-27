@@ -13,9 +13,9 @@ public class PlaceObject : MonoBehaviour
     private void Update()
     {
         Vector3 mousePosition = inputManager.GetSelectedMapPosition();
-        Vector3Int gridPosition = grid.WorldToCell(mousePosition);
+        //Vector3Int gridPosition = grid.WorldToCell(mousePosition);
         mPrefab.transform.position = mousePosition;
-        cellIndicator.transform.position = grid.CellToWorld(gridPosition) + new Vector3(0, 5.20f, 0);
-
+        //cellIndicator.transform.position = grid.CellToWorld(gridPosition) + new Vector3(0, 5.20f, 0);
+        // Uncomment these whenever i need, it disabled them because the grid.celltoworld and worldtocell are old and i got a new Grid script that doesnt have that
     }
 }
