@@ -149,9 +149,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: d7de3b8539e103044b88d5b3d39f7db6, type: 3}
-  - {fileID: -6478536213147159724, guid: d7de3b8539e103044b88d5b3d39f7db6, type: 3}
-  - {fileID: -8477521408866263191, guid: d7de3b8539e103044b88d5b3d39f7db6, type: 3}
+  - {fileID: -876546973899608171, guid: a0865b36b6a4b8645a3c5d98c3beb82d, type: 3}
+  - {fileID: 2100000, guid: 8b80713ec25d8f8438c0420160db1c25, type: 2}
+  - {fileID: 2100000, guid: 6a041d43c4019c842965d4ebb7665bc0, type: 2}
   - {fileID: -2813467912831258332, guid: d7de3b8539e103044b88d5b3d39f7db6, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -273,9 +273,9 @@ GameObject:
   - component: {fileID: 8848431931453109945}
   - component: {fileID: 8848431931323089164}
   - component: {fileID: 8848431931323089165}
-  - component: {fileID: -4223163241176209058}
+  - component: {fileID: -8851288306558586719}
   m_Layer: 0
-  m_Name: BasicRubberto
+  m_Name: FastRubberto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -290,8 +290,8 @@ Transform:
   m_GameObject: {fileID: 6018077541945464217}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 117.71241, y: 9.8766985, z: 121.13121}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2001300609820312676}
   m_Father: {fileID: 0}
@@ -343,12 +343,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f2ca69fae45576429134a537a767198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 11400000, guid: 069c6694d0805694cb4abd353afa6ff9, type: 2}
+  stats: {fileID: 11400000, guid: 3fc8ad4c893029d4f916a1895fb52a6c, type: 2}
+  spawnInfo: {fileID: 0}
   agent: {fileID: 8848431931323089165}
   waypointSystem: {fileID: 0}
   waypoints: []
   currentWaypoint: 0
-  distanceTreshold: 0.5
+  distanceTreshold: 5
 --- !u!195 &8848431931323089165
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -371,7 +372,7 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 3
---- !u!114 &-4223163241176209058
+--- !u!114 &-8851288306558586719
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -383,3 +384,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05b230c9659004b4e89516bbf13d1b7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawner: {fileID: 0}

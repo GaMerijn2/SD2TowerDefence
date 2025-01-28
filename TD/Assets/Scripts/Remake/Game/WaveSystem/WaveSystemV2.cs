@@ -50,6 +50,7 @@ public class WaveSystemV2 : MonoBehaviour
                 ScriptableEnemy.EnemyStats enemy = enemyData.ScriptableEnemy.enemyStats;
                 GameObject spawnedEnemy = spawner.SpawnObject(enemy.prefab, transform.position);
                 spawnedEnemy.GetOrAddComponent<SpawnInfo>().spawner = gameObject;
+                spawnedEnemy.GetOrAddComponent<HealthSystem>().health = enemy.health;
                 Debug.Log($"Spawned enemy: {enemy.name}");
 
                 yield return new WaitForSeconds(enemyData.spawnDelay);

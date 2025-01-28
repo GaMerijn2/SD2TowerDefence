@@ -1,13 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1102 &-3118554583321351105
+--- !u!1107 &-2145190592178966176
+AnimatorStateMachine:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: RightPaddle
+  m_ChildStates:
+  - serializedVersion: 1
+    m_State: {fileID: 8210711847164507951}
+    m_Position: {x: 310, y: 120, z: 0}
+  m_ChildStateMachines: []
+  m_AnyStateTransitions: []
+  m_EntryTransitions: []
+  m_StateMachineTransitions: {}
+  m_StateMachineBehaviours: []
+  m_AnyStatePosition: {x: 50, y: 20, z: 0}
+  m_EntryPosition: {x: 50, y: 120, z: 0}
+  m_ExitPosition: {x: 800, y: 120, z: 0}
+  m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
+  m_DefaultState: {fileID: 8210711847164507951}
+--- !u!1102 &-301702262355639255
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: RightPaddle|RowRight
+  m_Name: LeftPaddle|RowLeft
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -20,35 +42,13 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 6328147188992519894, guid: d7de3b8539e103044b88d5b3d39f7db6,
+  m_Motion: {fileID: -4702354854254836966, guid: 409b6782a7c7f044584d5cbcca9e40b2,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1107 &-2145190592178966176
-AnimatorStateMachine:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: RightPaddle
-  m_ChildStates:
-  - serializedVersion: 1
-    m_State: {fileID: -3118554583321351105}
-    m_Position: {x: 220, y: 110, z: 0}
-  m_ChildStateMachines: []
-  m_AnyStateTransitions: []
-  m_EntryTransitions: []
-  m_StateMachineTransitions: {}
-  m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 50, y: 20, z: 0}
-  m_EntryPosition: {x: 50, y: 120, z: 0}
-  m_ExitPosition: {x: 800, y: 120, z: 0}
-  m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: -3118554583321351105}
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
@@ -93,8 +93,8 @@ AnimatorStateMachine:
   m_Name: LeftPaddle
   m_ChildStates:
   - serializedVersion: 1
-    m_State: {fileID: 2956044138057632939}
-    m_Position: {x: 230, y: 110, z: 0}
+    m_State: {fileID: -301702262355639255}
+    m_Position: {x: 333.6087, y: 208.04347, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -104,15 +104,15 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: 2956044138057632939}
---- !u!1102 &2956044138057632939
+  m_DefaultState: {fileID: -301702262355639255}
+--- !u!1102 &8210711847164507951
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: LeftPaddle|RowLeft
+  m_Name: RightPaddle|RowRight
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -125,7 +125,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -4702354854254836966, guid: d7de3b8539e103044b88d5b3d39f7db6,
+  m_Motion: {fileID: 6328147188992519894, guid: 409b6782a7c7f044584d5cbcca9e40b2,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 

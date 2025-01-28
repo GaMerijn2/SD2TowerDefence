@@ -16,5 +16,5 @@ MonoBehaviour:
     name: RedRubberto
     prefab: {fileID: 6018077541945464217, guid: 2264f402405ff26449f935af970e93b9,
       type: 3}
-    speed: 4
+    speed: 6
     health: 25
