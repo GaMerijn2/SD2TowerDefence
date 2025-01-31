@@ -5,6 +5,8 @@ public class ObjectSpawner : MonoBehaviour
 {
     public GameObject SpawnObject(GameObject obj, Vector3 position)
     {
-        return Instantiate(obj, position, Quaternion.identity);
+        Quaternion rotation = Quaternion.Euler(-90f, 0f, 0f);
+
+        return Instantiate(obj, position, rotation);
     }
 }

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyStats:
     name: RedRubberto
-    prefab: {fileID: 6018077541945464217, guid: 2264f402405ff26449f935af970e93b9,
+    prefab: {fileID: 1176760470891910226, guid: b2d65bc6c37152b469f619fde6d4b2c3,
       type: 3}
     speed: 6
     health: 25
