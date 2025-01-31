@@ -44,8 +44,6 @@ public class EnemyMovement : MonoBehaviour
         {
             isWaypointReached = true; 
             currentWaypoint += 1;
-            Debug.Log($"Reached waypoint {currentWaypoint - 1}. Moving to waypoint {currentWaypoint}.");
-            
             StartCoroutine(ResetWaypointFlag());
         }
     }

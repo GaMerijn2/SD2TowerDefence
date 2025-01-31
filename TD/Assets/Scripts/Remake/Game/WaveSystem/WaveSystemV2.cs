@@ -51,7 +51,7 @@ public class WaveSystemV2 : MonoBehaviour
                 GameObject spawnedEnemy = spawner.SpawnObject(enemy.prefab, transform.position);
                 spawnedEnemy.GetOrAddComponent<SpawnInfo>().spawner = gameObject;
                 spawnedEnemy.GetOrAddComponent<HealthSystem>().health = enemy.health;
-                Debug.Log($"Spawned enemy: {enemy.name}");
+                //Debug.Log($"Spawned enemy: {enemy.name}");
 
                 yield return new WaitForSeconds(enemyData.spawnDelay);
             }
@@ -65,6 +65,6 @@ public class WaveSystemV2 : MonoBehaviour
     public void ToggleStartWaveBool()
     {
         startWave = !startWave;
-        Debug.Log($"StartWave set to: {startWave}");
+        //Debug.Log($"StartWave set to: {startWave}");
     }
 }

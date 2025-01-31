@@ -18,11 +18,8 @@ public class ShootBullet : MonoBehaviour
     public float attackCooldown = 1f;
 
     [SerializeField]
-    private AudioSource bulletSound;
-    private void Start()
-    {
-        
-    }
+    private AudioSource[] bulletSounds;
+
     public void ShootBulletForward( float speed, float cooldown)
     {
 
